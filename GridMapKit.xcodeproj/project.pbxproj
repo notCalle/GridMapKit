@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB10B7331DF0D006000CCB01 /* GridMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB10B7291DF0D006000CCB01 /* GridMapKit.framework */; };
 		EB10B7381DF0D006000CCB01 /* GridMapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB10B7371DF0D006000CCB01 /* GridMapKitTests.swift */; };
 		EB10B73A1DF0D006000CCB01 /* GridMapKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB10B72C1DF0D006000CCB01 /* GridMapKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9680361DF1CC140087DC6D /* GMTile.swift */; };
+		EB9680391DF1D04F0087DC6D /* GMTileGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9680381DF1D04F0087DC6D /* GMTileGroup.swift */; };
+		EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96803A1DF1D3300087DC6D /* GMError.swift */; };
+		EB96803E1DF1D91A0087DC6D /* GridMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB10B7291DF0D006000CCB01 /* GridMapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		EB10B7321DF0D006000CCB01 /* GridMapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridMapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB10B7371DF0D006000CCB01 /* GridMapKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMapKitTests.swift; sourceTree = "<group>"; };
 		EB10B7391DF0D006000CCB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9680361DF1CC140087DC6D /* GMTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTile.swift; sourceTree = "<group>"; };
+		EB9680381DF1D04F0087DC6D /* GMTileGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTileGroup.swift; sourceTree = "<group>"; };
+		EB96803A1DF1D3300087DC6D /* GMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB10B7331DF0D006000CCB01 /* GridMapKit.framework in Frameworks */,
+				EB96803E1DF1D91A0087DC6D /* GridMapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +79,9 @@
 			children = (
 				EB10B72C1DF0D006000CCB01 /* GridMapKit.h */,
 				EB10B72D1DF0D006000CCB01 /* Info.plist */,
+				EB9680361DF1CC140087DC6D /* GMTile.swift */,
+				EB9680381DF1D04F0087DC6D /* GMTileGroup.swift */,
+				EB96803A1DF1D3300087DC6D /* GMError.swift */,
 			);
 			path = GridMapKit;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 				EB10B7251DF0D006000CCB01 /* Frameworks */,
 				EB10B7261DF0D006000CCB01 /* Headers */,
 				EB10B7271DF0D006000CCB01 /* Resources */,
+				EB9680351DF1CABB0087DC6D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -142,12 +152,14 @@
 		EB10B7201DF0D006000CCB01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GM;
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Calle Englund";
 				TargetAttributes = {
 					EB10B7281DF0D006000CCB01 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					EB10B7311DF0D006000CCB01 = {
@@ -191,11 +203,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB9680351DF1CABB0087DC6D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "gitcount=$(git rev-list HEAD --count)\ngitrevid=$(git rev-parse --short HEAD)\ngitdiffs=$(git diff|wc -l)\nappbuild=$(printf \"%d.%d-%07x\" $gitcount $gitdiffs 0x$gitrevid)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appbuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appbuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\" || true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB10B7241DF0D006000CCB01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */,
+				EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */,
+				EB9680391DF1D04F0087DC6D /* GMTileGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +351,7 @@
 		EB10B73E1DF0D006000CCB01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J33D8ZT4XT;
@@ -332,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.bofh.discord.GridMapKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -339,6 +372,7 @@
 		EB10B73F1DF0D006000CCB01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J33D8ZT4XT;
@@ -358,6 +392,7 @@
 		EB10B7411DF0D006000CCB01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J33D8ZT4XT;
 				INFOPLIST_FILE = GridMapKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -370,6 +405,7 @@
 		EB10B7421DF0D006000CCB01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = J33D8ZT4XT;
 				INFOPLIST_FILE = GridMapKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -398,6 +434,7 @@
 				EB10B73F1DF0D006000CCB01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB10B7401DF0D006000CCB01 /* Build configuration list for PBXNativeTarget "GridMapKitTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +443,7 @@
 				EB10B7421DF0D006000CCB01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
