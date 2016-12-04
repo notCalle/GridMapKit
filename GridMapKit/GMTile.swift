@@ -9,14 +9,11 @@
 import UIKit
 import SpriteKit
 
-class GMTile: NSObject {
+public class GMTile: NSObject {
     var group: GMTileGroup
     var point: CGPoint
     
-    init(group: GMTileGroup, point: CGPoint) throws {
-        if !group.extent.contains(point) {
-            throw GMError.outsideParentExtent
-        }
+    public init(group: GMTileGroup, point: CGPoint) {
         self.group = group
         self.point = point
     }

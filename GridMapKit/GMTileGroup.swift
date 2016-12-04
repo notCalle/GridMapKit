@@ -8,14 +8,11 @@
 
 import UIKit
 
-class GMTileGroup: NSObject {
+public class GMTileGroup: NSObject {
     var parent: GMTileGroup?
     var extent: CGRect
     
-    init(parent: GMTileGroup?, extent:CGRect) throws {
-        if !(parent?.extent.contains(extent))! {
-            throw GMError.outsideParentExtent
-        }
+    public init(parent: GMTileGroup?, extent:CGRect) {
         self.parent = parent
         self.extent = extent
     }
