@@ -10,11 +10,11 @@ import UIKit
 import SpriteKit
 
 public class GMTile: NSObject {
-    var group: GMTileGroup
+    var layer: GMLayer
     var point: CGPoint
     
-    public init(group: GMTileGroup, point: CGPoint) {
-        self.group = group
+    public init(layer: GMLayer, point: CGPoint) {
+        self.layer = layer
         self.point = point
     }
 }
