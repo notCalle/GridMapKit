@@ -12,7 +12,17 @@ import UIKit
 // A GMRegion represents a layered rectangle of the world map
 //
 public class GMRegion: NSObject {
-    public override init() {
-        
+    var layers: [GMLayer] = []
+    var offset: CGPoint
+    var size: CGSize
+    
+    public init(offset: CGPoint, size: CGSize) {
+        self.offset = offset
+        self.size = size
+        super.init()
+    }
+    
+    func addLayer(_ layer: GMLayer, depth: Int) {
+        self.layers[depth] = layer
     }
 }
