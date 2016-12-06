@@ -16,13 +16,14 @@ public class GMRegion: NSObject {
     var offset: CGPoint
     var size: CGSize
     
-    public init(offset: CGPoint, size: CGSize) {
+    public init(offset: CGPoint, size: CGSize, maxdepth: Int) {
         self.offset = offset
         self.size = size
+        self.layers.reserveCapacity(maxdepth)
         super.init()
     }
     
     func addLayer(_ layer: GMLayer, depth: Int) {
-        self.layers[depth] = layer
+        self.layers.insert(layer, at: depth)
     }
 }
