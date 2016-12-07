@@ -14,18 +14,25 @@ import UIKit
 public class GMLayer: NSObject {
     var region: GMRegion
     var depth: Int
-    var tiles:[GMTile] = []
+    var tiles:[GMTile?]
 
     public init(region: GMRegion, depth: Int) {
         self.region = region
         self.depth = depth
-        self.tiles.reserveCapacity(Int(region.size.width) * Int(region.size.height))
+        self.tiles = Array<GMTile?>(repeating: nil, count: Int(region.size.width) * Int(region.size.height))
         super.init()
         region.addLayer(self, depth: depth)
     }
     
-    func addTile(_ tile: GMTile, at:CGPoint) {
-        let tilepos = Int(at.x) + Int(at.y) * Int(region.size.width)
-        tiles.insert(tile, at: tilepos)
+    private func index(at: CGPoint) -> Int {
+        return Int(at.x) + Int(at.y) * Int(region.size.width)
+    }
+    
+    func addTile(_ tile: GMTile, at: CGPoint) {
+        tiles.insert(tile, at: self.index(at: at))
+    }
+    
+    public func tile(at: CGPoint) -> GMTile? {
+        return tiles[self.index(at: at)]
     }
 }

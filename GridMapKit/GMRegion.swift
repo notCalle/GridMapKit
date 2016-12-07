@@ -12,14 +12,14 @@ import UIKit
 // A GMRegion represents a layered rectangle of the world map
 //
 public class GMRegion: NSObject {
-    var layers: [GMLayer] = []
+    var layers: [GMLayer?]
     var offset: CGPoint
     var size: CGSize
     
     public init(offset: CGPoint, size: CGSize, maxdepth: Int) {
         self.offset = offset
         self.size = size
-        self.layers.reserveCapacity(maxdepth)
+        self.layers = Array<GMLayer?>(repeating: nil, count: maxdepth)
         super.init()
     }
     
