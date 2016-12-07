@@ -33,6 +33,11 @@ public class GMLayer: NSObject {
     }
     
     public func tile(at: CGPoint) -> GMTile? {
-        return tiles[self.index(at: at)]
+        let index = self.index(at: at)
+        if (index >= self.tiles.startIndex && index < self.tiles.endIndex) {
+            return tiles[self.index(at: at)]
+        } else {
+            return nil
+        }
     }
 }

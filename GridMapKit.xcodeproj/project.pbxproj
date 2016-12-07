@@ -11,6 +11,9 @@
 		EB10B73A1DF0D006000CCB01 /* GridMapKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB10B72C1DF0D006000CCB01 /* GridMapKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB32A5191DF43AFB005C5E94 /* GMLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32A5181DF43AFB005C5E94 /* GMLayer.swift */; };
 		EB3AA7451DF83451005373DA /* GMRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7441DF83451005373DA /* GMRegion.swift */; };
+		EB3AA7471DF8356E005373DA /* GMPathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7461DF8356E005373DA /* GMPathFinder.swift */; };
+		EB3AA7491DF8364F005373DA /* GMDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7481DF8364F005373DA /* GMDirection.swift */; };
+		EB3AA74B1DF838F8005373DA /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA74A1DF838F8005373DA /* CGPoint.swift */; };
 		EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9680361DF1CC140087DC6D /* GMTile.swift */; };
 		EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96803A1DF1D3300087DC6D /* GMError.swift */; };
 		EB96803E1DF1D91A0087DC6D /* GridMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB10B7291DF0D006000CCB01 /* GridMapKit.framework */; };
@@ -35,6 +38,9 @@
 		EB10B7391DF0D006000CCB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB32A5181DF43AFB005C5E94 /* GMLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMLayer.swift; sourceTree = "<group>"; };
 		EB3AA7441DF83451005373DA /* GMRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMRegion.swift; sourceTree = "<group>"; };
+		EB3AA7461DF8356E005373DA /* GMPathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPathFinder.swift; sourceTree = "<group>"; };
+		EB3AA7481DF8364F005373DA /* GMDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMDirection.swift; sourceTree = "<group>"; };
+		EB3AA74A1DF838F8005373DA /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		EB9680361DF1CC140087DC6D /* GMTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTile.swift; sourceTree = "<group>"; };
 		EB96803A1DF1D3300087DC6D /* GMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				EB3AA7441DF83451005373DA /* GMRegion.swift */,
+				EB3AA7461DF8356E005373DA /* GMPathFinder.swift */,
+				EB3AA7481DF8364F005373DA /* GMDirection.swift */,
+				EB3AA74A1DF838F8005373DA /* CGPoint.swift */,
 				EB10B72C1DF0D006000CCB01 /* GridMapKit.h */,
 				EB10B72D1DF0D006000CCB01 /* Info.plist */,
 				EB9680361DF1CC140087DC6D /* GMTile.swift */,
@@ -229,8 +238,11 @@
 			files = (
 				EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */,
 				EB3AA7451DF83451005373DA /* GMRegion.swift in Sources */,
+				EB3AA7471DF8356E005373DA /* GMPathFinder.swift in Sources */,
+				EB3AA74B1DF838F8005373DA /* CGPoint.swift in Sources */,
 				EB32A5191DF43AFB005C5E94 /* GMLayer.swift in Sources */,
 				EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */,
+				EB3AA7491DF8364F005373DA /* GMDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

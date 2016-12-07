@@ -19,4 +19,8 @@ public class GMTile: NSObject {
         super.init()
         layer.addTile(self, at: point)
     }
+    
+    public func exit(direction: GMDirection) -> GMTile? {
+        return self.layer.tile(at: self.point + direction)
+    }
 }

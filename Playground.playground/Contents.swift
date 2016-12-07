@@ -8,9 +8,9 @@ var region = GMRegion(offset: CGPoint(x: 0, y: 0), size: CGSize(width: 16, heigh
 var layer = GMLayer(region: region, depth: 0)
 
 GMTile(layer: layer, point: CGPoint(x: 0, y: 0))
-GMTile(layer: layer, point: CGPoint(x: 1, y: 1))
+GMTile(layer: layer, point: CGPoint(x: 1, y: 0))
 
-layer.tile(at: CGPoint(x: 0, y: 0))
-layer.tile(at: CGPoint(x: 1, y: 0))
-
-
+var tile = layer.tile(at: CGPoint(x: 0, y: 0))
+tile!.exit(direction: .north)
+tile!.exit(direction: .east)
+tile!.exit(direction: .south)
