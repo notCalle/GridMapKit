@@ -9,5 +9,13 @@
 import UIKit
 
 class GMAgent: NSObject {
+    var region: GMRegion
+    var position: CGPoint
+    var layers: CountableRange<Int>
 
+    public init(region: GMRegion, position: CGPoint, layers: CountableRange<Int>) {
+        self.region = region
+        self.position = position
+        self.layers = layers
+    }
 }
