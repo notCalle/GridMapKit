@@ -3,14 +3,23 @@
 import UIKit
 import GridMapKit
 
-var region = GMRegion(offset: CGPoint(x: 0, y: 0), size: CGSize(width: 16, height: 16), maxdepth: 10)
+var region = GMRegion(x: 0, y: 0, w: 8, h: 8, layers: 10)
 
 var layer = GMLayer(region: region, depth: 0)
 
-GMTile(layer: layer, point: CGPoint(x: 0, y: 0))
-GMTile(layer: layer, point: CGPoint(x: 1, y: 0))
+var map = [ [ 1, 1, 1, 1, 1, 1, 1, 1 ],
+            [ 1, 0, 0, 1, 1, 1, 0, 0 ],
+            [ 1, 1, 0, 0, 0, 1, 1, 1 ],
+            [ 0, 1, 0, 0, 0, 1, 0, 1 ],
+            [ 0, 1, 1, 1, 1, 1, 0, 1 ],
+            [ 0, 1, 0, 0, 0, 1, 1, 1 ],
+            [ 1, 1, 0, 0, 0, 0, 0, 1 ],
+            [ 1, 1, 1, 1, 1, 1, 1, 1 ] ]
 
-var tile = layer.tile(at: CGPoint(x: 0, y: 0))
-tile!.exit(direction: .north)
-tile!.exit(direction: .east)
-tile!.exit(direction: .south)
+for row in 0...7{
+    for col in 0...7 {
+        if map[row][col] == 1 {
+            GMTile(layer: layer, x: col, y: row)
+        }
+    }
+}

@@ -11,9 +11,13 @@ import SpriteKit
 
 public class GMTile: NSObject {
     var layer: GMLayer
-    var point: CGPoint
+    var point: vector_int2
 
-    public init(layer: GMLayer, point: CGPoint) {
+    public convenience init(layer: GMLayer, x: Int, y: Int) {
+        self.init(layer: layer, point: vector_int2(x: Int32(x), y: Int32(y)))
+    }
+    
+    public init(layer: GMLayer, point: vector_int2) {
         self.layer = layer
         self.point = point
         super.init()

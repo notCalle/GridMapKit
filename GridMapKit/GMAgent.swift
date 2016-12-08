@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import GameplayKit
 
 class GMAgent: NSObject {
     var region: GMRegion
-    var position: CGPoint
+    var position: vector_int2
     var layers: CountableRange<Int>
 
-    public init(region: GMRegion, position: CGPoint, layers: CountableRange<Int>) {
+    public init(region: GMRegion, position: vector_int2, layers: CountableRange<Int>) {
         self.region = region
         self.position = position
         self.layers = layers
