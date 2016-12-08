@@ -7,7 +7,20 @@
 //
 
 import UIKit
+import GameplayKit
 
 class GMPathFinder: NSObject {
+    var agent: GMAgent
+    var graph: GKGridGraph<GKGridGraphNode>
     
+    public init(agent: GMAgent) {
+        self.agent = agent
+        graph = GKGridGraph(fromGridStartingAt: agent.position,
+                            width: agent.region.size.x, height: agent.region.size.y,
+                            diagonalsAllowed: true)
+    }
+    
+    public func findPathTo(position: CGPoint) -> Array<CGPoint>? {
+        return nil
+    }
 }
