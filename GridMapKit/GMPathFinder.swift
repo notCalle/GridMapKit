@@ -15,12 +15,23 @@ class GMPathFinder: NSObject {
     
     public init(agent: GMAgent) {
         self.agent = agent
-        graph = GKGridGraph(fromGridStartingAt: agent.position,
+        graph = GKGridGraph(fromGridStartingAt: vector_int2(0, 0),
                             width: agent.region.size.x, height: agent.region.size.y,
                             diagonalsAllowed: true)
+        let region = agent.region
+        for y in 0..<region.size.y {
+            for x in 0..<region.size.x {
+                if region.layers[0]!.tile(at: vector_int2(x, y)) != nil {
+                    graph.connectToAdjacentNodes(node: GKGridGraphNode(gridPosition: vector_int2(x, y)))
+                }
+            }
+        }
     }
     
-    public func findPathTo(position: CGPoint) -> Array<CGPoint>? {
-        return nil
+    public func findPath(to position: vector_int2) -> [GKGridGraphNode] {
+        let start = self.graph.node(atGridPosition: self.agent.position)
+        let target = self.graph.node(atGridPosition: position)
+        
+        return self.graph.findPath(from: start!, to: target!) as! [GKGridGraphNode]
     }
 }

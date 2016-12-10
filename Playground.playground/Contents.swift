@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import GameplayKit
 import GridMapKit
 
 var region = GMRegion(x: 0, y: 0, w: 8, h: 8, layers: 10)
