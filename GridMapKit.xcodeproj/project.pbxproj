@@ -16,7 +16,6 @@
 		EB3AA74B1DF838F8005373DA /* vector_int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA74A1DF838F8005373DA /* vector_int.swift */; };
 		EB3AA74D1DF98575005373DA /* GMAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA74C1DF98575005373DA /* GMAgent.swift */; };
 		EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9680361DF1CC140087DC6D /* GMTile.swift */; };
-		EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB96803A1DF1D3300087DC6D /* GMError.swift */; };
 		EB96803E1DF1D91A0087DC6D /* GridMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB10B7291DF0D006000CCB01 /* GridMapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		EB3AA74A1DF838F8005373DA /* vector_int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_int.swift; sourceTree = "<group>"; };
 		EB3AA74C1DF98575005373DA /* GMAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMAgent.swift; sourceTree = "<group>"; };
 		EB9680361DF1CC140087DC6D /* GMTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTile.swift; sourceTree = "<group>"; };
-		EB96803A1DF1D3300087DC6D /* GMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 				EB10B72D1DF0D006000CCB01 /* Info.plist */,
 				EB9680361DF1CC140087DC6D /* GMTile.swift */,
 				EB32A5181DF43AFB005C5E94 /* GMLayer.swift */,
-				EB96803A1DF1D3300087DC6D /* GMError.swift */,
 			);
 			path = GridMapKit;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB96803B1DF1D3300087DC6D /* GMError.swift in Sources */,
 				EB3AA7451DF83451005373DA /* GMRegion.swift in Sources */,
 				EB3AA7471DF8356E005373DA /* GMPathFinder.swift in Sources */,
 				EB3AA74D1DF98575005373DA /* GMAgent.swift in Sources */,
