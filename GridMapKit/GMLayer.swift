@@ -25,18 +25,18 @@ public class GMLayer: NSObject {
         region.addLayer(self, depth: depth)
     }
     
-    private func index(at: vector_int2) -> Int {
-        return Int(at.x) + Int(at.y) * Int(region.size.x)
+    private func index(at point: vector_int2) -> Int {
+        return Int(point.x) + Int(point.y) * Int(region.size.x)
     }
     
-    func addTile(_ tile: GMTile, at: vector_int2) {
-        tiles.insert(tile, at: self.index(at: at))
+    func addTile(_ tile: GMTile, at point: vector_int2) {
+        tiles.insert(tile, at: self.index(at: point))
     }
     
-    public func tile(at: vector_int2) -> GMTile? {
-        let index = self.index(at: at)
+    public func tile(at point: vector_int2) -> GMTile? {
+        let index = self.index(at: point)
         if (index >= self.tiles.startIndex && index < self.tiles.endIndex) {
-            return tiles[self.index(at: at)]
+            return tiles[self.index(at: point)]
         } else {
             return nil
         }

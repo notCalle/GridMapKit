@@ -8,16 +8,17 @@
 
 import UIKit
 import SpriteKit
+import GameplayKit
 
 public class GMTile: NSObject {
     var layer: GMLayer
     var point: vector_int2
 
     public convenience init(layer: GMLayer, x: Int, y: Int) {
-        self.init(layer: layer, point: vector_int2(x: Int32(x), y: Int32(y)))
+        self.init(layer: layer, at: vector_int2(x: Int32(x), y: Int32(y)))
     }
     
-    public init(layer: GMLayer, point: vector_int2) {
+    public init(layer: GMLayer, at point: vector_int2) {
         self.layer = layer
         self.point = point
         super.init()

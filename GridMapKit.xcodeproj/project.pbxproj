@@ -83,14 +83,14 @@
 		EB10B72B1DF0D006000CCB01 /* GridMapKit */ = {
 			isa = PBXGroup;
 			children = (
+				EB10B72D1DF0D006000CCB01 /* Info.plist */,
+				EB10B72C1DF0D006000CCB01 /* GridMapKit.h */,
 				EB3AA7441DF83451005373DA /* GMRegion.swift */,
+				EB32A5181DF43AFB005C5E94 /* GMLayer.swift */,
+				EB9680361DF1CC140087DC6D /* GMTile.swift */,
 				EB3AA7461DF8356E005373DA /* GMPathFinder.swift */,
 				EB3AA74C1DF98575005373DA /* GMAgent.swift */,
 				EB3AA7481DF8364F005373DA /* GMDirection.swift */,
-				EB10B72C1DF0D006000CCB01 /* GridMapKit.h */,
-				EB10B72D1DF0D006000CCB01 /* Info.plist */,
-				EB9680361DF1CC140087DC6D /* GMTile.swift */,
-				EB32A5181DF43AFB005C5E94 /* GMLayer.swift */,
 			);
 			path = GridMapKit;
 			sourceTree = "<group>";
