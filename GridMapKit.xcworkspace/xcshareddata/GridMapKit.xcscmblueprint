@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D65BC6F7CC8D47E4DCA93CCD38933F38B766FEB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D65BC6F7CC8D47E4DCA93CCD38933F38B766FEB" : 9223372036854775807,
+    "A76BA39A002918612122755D879E5D33B31EE525" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "27DD95D2-82D1-42A7-B80B-0B463D12D1EB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D65BC6F7CC8D47E4DCA93CCD38933F38B766FEB" : "GridMapKit\/",
+    "A76BA39A002918612122755D879E5D33B31EE525" : "GridMapKit\/Carthage\/Checkouts\/SwiftPriorityQueue\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GridMapKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GridMapKit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/notCalle\/GridMapKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D65BC6F7CC8D47E4DCA93CCD38933F38B766FEB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davecom\/SwiftPriorityQueue.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A76BA39A002918612122755D879E5D33B31EE525"
+    }
+  ]
+}
