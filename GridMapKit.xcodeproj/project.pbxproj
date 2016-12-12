@@ -13,7 +13,6 @@
 		EB3AA7451DF83451005373DA /* GMRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7441DF83451005373DA /* GMRegion.swift */; };
 		EB3AA7471DF8356E005373DA /* GMPathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7461DF8356E005373DA /* GMPathFinder.swift */; };
 		EB3AA7491DF8364F005373DA /* GMDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA7481DF8364F005373DA /* GMDirection.swift */; };
-		EB3AA74B1DF838F8005373DA /* vector_int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA74A1DF838F8005373DA /* vector_int.swift */; };
 		EB3AA74D1DF98575005373DA /* GMAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3AA74C1DF98575005373DA /* GMAgent.swift */; };
 		EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9680361DF1CC140087DC6D /* GMTile.swift */; };
 		EB96803E1DF1D91A0087DC6D /* GridMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB10B7291DF0D006000CCB01 /* GridMapKit.framework */; };
@@ -40,7 +39,6 @@
 		EB3AA7441DF83451005373DA /* GMRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMRegion.swift; sourceTree = "<group>"; };
 		EB3AA7461DF8356E005373DA /* GMPathFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMPathFinder.swift; sourceTree = "<group>"; };
 		EB3AA7481DF8364F005373DA /* GMDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMDirection.swift; sourceTree = "<group>"; };
-		EB3AA74A1DF838F8005373DA /* vector_int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vector_int.swift; sourceTree = "<group>"; };
 		EB3AA74C1DF98575005373DA /* GMAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMAgent.swift; sourceTree = "<group>"; };
 		EB9680361DF1CC140087DC6D /* GMTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 				EB3AA7461DF8356E005373DA /* GMPathFinder.swift */,
 				EB3AA74C1DF98575005373DA /* GMAgent.swift */,
 				EB3AA7481DF8364F005373DA /* GMDirection.swift */,
-				EB3AA74A1DF838F8005373DA /* vector_int.swift */,
 				EB10B72C1DF0D006000CCB01 /* GridMapKit.h */,
 				EB10B72D1DF0D006000CCB01 /* Info.plist */,
 				EB9680361DF1CC140087DC6D /* GMTile.swift */,
@@ -239,7 +236,6 @@
 				EB3AA7451DF83451005373DA /* GMRegion.swift in Sources */,
 				EB3AA7471DF8356E005373DA /* GMPathFinder.swift in Sources */,
 				EB3AA74D1DF98575005373DA /* GMAgent.swift in Sources */,
-				EB3AA74B1DF838F8005373DA /* vector_int.swift in Sources */,
 				EB32A5191DF43AFB005C5E94 /* GMLayer.swift in Sources */,
 				EB9680371DF1CC140087DC6D /* GMTile.swift in Sources */,
 				EB3AA7491DF8364F005373DA /* GMDirection.swift in Sources */,

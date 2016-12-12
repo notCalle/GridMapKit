@@ -25,6 +25,6 @@ public class GMTile: NSObject {
     }
     
     public func exit(direction: GMDirection) -> GMTile? {
-        return self.layer.tile(at: self.point + direction)
+        return self.layer.tile(at: direction.point(relativeTo: self.point))
     }
 }
