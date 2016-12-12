@@ -41,6 +41,7 @@
 		EB3AA7481DF8364F005373DA /* GMDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMDirection.swift; sourceTree = "<group>"; };
 		EB3AA74C1DF98575005373DA /* GMAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMAgent.swift; sourceTree = "<group>"; };
 		EB9680361DF1CC140087DC6D /* GMTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMTile.swift; sourceTree = "<group>"; };
+		EBAC10FB1DFF4D1700269D4B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		EB10B71F1DF0D006000CCB01 = {
 			isa = PBXGroup;
 			children = (
+				EBAC10FB1DFF4D1700269D4B /* Playground.playground */,
 				EB10B72B1DF0D006000CCB01 /* GridMapKit */,
 				EB10B7361DF0D006000CCB01 /* GridMapKitTests */,
 				EB10B72A1DF0D006000CCB01 /* Products */,
