@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/calle/Documents/Projects/GridMapKit/Playground.playground">
-   </FileRef>
-   <FileRef
       location = "container:GridMapKit.xcodeproj">
    </FileRef>
 </Workspace>
